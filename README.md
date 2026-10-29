@@ -2,7 +2,7 @@
 
 Una aplicación web educativa y gamificada diseñada para niños en primero de primaria. Su objetivo es facilitar el aprendizaje de la lectoescritura mediante el método silábico y el refuerzo fonológico, evitando la frustración y fomentando la autonomía.
 
-🎮 **[Juega la demo aquí](https://leax9.github.io/aprende-a-leer/)** *(Cambia este enlace por la URL real de tu GitHub Pages)*
+🎮 **[Juega la demo aquí](https://leax9.github.io/aprende-a-leer/)**
 
 ## ✨ Características Principales
 * **Sistema de Recompensas:** Las estrellas ganadas se guardan automáticamente en la memoria de la tablet (Local Storage) para no perder el progreso entre sesiones.
