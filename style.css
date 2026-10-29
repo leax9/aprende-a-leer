@@ -1,0 +1,43 @@
+:root {
+    --primary: #4CAF50;
+    --secondary: #FFC107;
+    --bg: #F0F8FF;
+    --text: #333;
+    --slot-bg: #E0E0E0;
+}
+* { box-sizing: border-box; font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; }
+body { margin: 0; padding: 0; background-color: var(--bg); color: var(--text); touch-action: manipulation; user-select: none; }
+.screen { display: none; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+.screen.active { display: flex; }
+
+h1 { font-size: 2.5rem; text-align: center; color: var(--primary); }
+.stars-total { font-size: 1.5rem; margin-bottom: 20px; font-weight: bold; }
+
+.config-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 15px; }
+label { font-size: 1.2rem; font-weight: bold; }
+select { font-size: 1.2rem; padding: 10px; border-radius: 10px; border: 2px solid var(--primary); }
+
+.btn-primary, .btn-secondary, .btn-audio { font-size: 1.5rem; padding: 15px 30px; border: none; border-radius: 15px; cursor: pointer; font-weight: bold; transition: transform 0.1s; }
+.btn-primary { background-color: var(--primary); color: white; margin-top: 10px; }
+.btn-primary:active { transform: scale(0.95); }
+.btn-secondary { background-color: #f44336; color: white; font-size: 1rem; padding: 10px 15px; }
+.btn-audio { background-color: #2196F3; color: white; margin: 15px 0; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; justify-content: center;}
+
+.top-bar { width: 100%; max-width: 800px; display: flex; align-items: center; justify-content: space-between; position: absolute; top: 20px; padding: 0 20px; }
+.progress-container { flex-grow: 1; height: 20px; background: #ddd; border-radius: 10px; margin: 0 15px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.3s; }
+.progress-text { font-size: 1.2rem; font-weight: bold; }
+
+.game-area { display: flex; flex-direction: column; align-items: center; margin-top: 60px; width: 100%; max-width: 800px; }
+.image-box { font-size: 8rem; margin-bottom: 20px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 200px; height: 200px; display: flex; justify-content: center; align-items: center; }
+
+.slots-container { display: flex; gap: 15px; margin-bottom: 40px; min-height: 80px; }
+.slot { width: 80px; height: 80px; background: var(--slot-bg); border: 3px dashed #999; border-radius: 15px; display: flex; justify-content: center; align-items: center; font-size: 2.2rem; font-weight: bold; text-transform: uppercase; }
+.slot.filled { background: white; border: 3px solid var(--primary); color: var(--primary); }
+
+.syllables-container { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+.syllable { width: 90px; height: 90px; background: var(--secondary); border-radius: 15px; display: flex; justify-content: center; align-items: center; font-size: 2.2rem; font-weight: bold; text-transform: uppercase; cursor: pointer; box-shadow: 0 5px 0 #d4a000; transition: transform 0.1s; }
+.syllable:active { transform: translateY(5px); box-shadow: none; }
+.syllable.hidden { visibility: hidden; }
+
+.reward-stars { font-size: 4rem; margin: 20px 0; }

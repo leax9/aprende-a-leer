@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aprende a Leer con Nil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+    <!-- Setup Screen -->
+    <div id="setup-screen" class="screen active">
+        <h1>🌟 Aprende a Leer 🌟</h1>
+        <div class="stars-total">Estrellas totales: <span id="total-stars-display">0</span> ⭐</div>
+        
+        <div class="config-card">
+            <label for="lang-select">Idioma:</label>
+            <select id="lang-select">
+                <option value="es">Castellano</option>
+                <option value="ca">Català</option>
+            </select>
+
+            <label for="word-count">Número de palabras:</label>
+            <select id="word-count">
+                <option value="5">5 palabras</option>
+                <option value="10">10 palabras</option>
+                <option value="15">15 palabras</option>
+            </select>
+
+            <button id="start-btn" class="btn-primary">¡Empezar a jugar!</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="top-bar">
+            <button id="back-btn" class="btn-secondary">⬅️ Salir</button>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-fill"></div>
+            </div>
+            <div class="progress-text"><span id="current-word-idx">1</span> / <span id="total-words-idx">10</span></div>
+        </div>
+
+        <div class="game-area">
+            <div id="image-container" class="image-box">🐱</div>
+            <button id="play-audio-btn" class="btn-audio">🔊 Escuchar</button>
+            
+            <div id="target-slots" class="slots-container">
+                <!-- Slots generados por JS -->
+            </div>
+
+            <div id="available-syllables" class="syllables-container">
+                <!-- Sílabas generadas por JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Reward Screen -->
+    <div id="reward-screen" class="screen">
+        <h1>¡Muy bien! 🎉</h1>
+        <div class="reward-stars">⭐⭐⭐</div>
+        <p>Has ganado <span id="earned-stars">3</span> estrellas.</p>
+        <button id="home-btn" class="btn-primary">Volver al inicio</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
